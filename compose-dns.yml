@@ -1,0 +1,40 @@
+version: "3.8"
+
+services:
+
+  # ----------------------------------------------------------
+  #  APLICACIÓN PRINCIPAL — workflows
+  #  Accesible en: https://tu-dominio.com  y  https://www.tu-dominio.com
+  # ----------------------------------------------------------
+  workflows:
+    image: francosaavedra665/workflows:latest
+    container_name: workflows_app
+    restart: unless-stopped
+    expose:
+      - "80"
+    environment:
+      - TZ=${TZ}
+    labels:
+      - traefik.enable=true
+
+      # ── Router principal (raíz y www) ──────────────
+      - traefik.http.routers.workflows.rule=Host(`${MY_DOMAIN}`) || Host(`www.${MY_DOMAIN}`)
+      - traefik.http.routers.workflows.entrypoints=websecure
+      - traefik.http.routers.workflows.tls=true
+      - traefik.http.routers.workflows.tls.certresolver=letsencrypt
+
+      # ── Middleware: redirigir www → raíz ─────────────────
+      - traefik.http.routers.workflows.middlewares=www-redirect,security-headers
+      - traefik.http.middlewares.www-redirect.redirectregex.regex=^https://www\.(.*)
+      - traefik.http.middlewares.www-redirect.redirectregex.replacement=https://$${1}
+      - traefik.http.middlewares.www-redirect.redirectregex.permanent=true
+
+      # ── Middleware: cabeceras de seguridad ────────────────
+      - traefik.http.middlewares.security-headers.headers.forceSTSHeader=true
+      - traefik.http.middlewares.security-headers.headers.stsSeconds=31536000
+      - traefik.http.middlewares.security-headers.headers.stsIncludeSubdomains=true
+      - traefik.http.middlewares.security-headers.headers.contentTypeNosniff=true
+      - traefik.http.middlewares.security-headers.headers.browserXssFilter=true
+
+      # ── Puerto del contenedor ─────────────────────────────
+      - traefik.http.services.workflows.loadbalancer.server.port=80

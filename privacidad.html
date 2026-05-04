@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Política de Eliminación de Datos - StudioContent</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <style>
+    :root {
+      --bg-dark: #000000;
+      --accent-cyan: #00e5ff;
+      --accent-blue: #0070f3;
+      --text-primary: #f8fafc;
+      --text-secondary: #94a3b8;
+      --gradient-primary: linear-gradient(135deg, #00e5ff 0%, #0070f3 100%);
+      --glass-effect: rgba(255, 255, 255, 0.03);
+      --glass-border: rgba(255, 255, 255, 0.08);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    }
+
+    body {
+      background-color: var(--bg-dark);
+      color: var(--text-primary);
+    }
+
+    .landing-container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 120px 20px 60px;
+    }
+
+    .back-nav {
+      margin-bottom: 30px;
+    }
+
+    .content-card {
+      background: var(--glass-effect);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid var(--glass-border);
+      border-radius: 20px;
+      padding: 50px;
+    }
+
+    .content-card h1 {
+      font-size: 2.2rem;
+      font-weight: 800;
+      margin-bottom: 10px;
+      line-height: 1.2;
+      background: var(--gradient-primary);
+      background-size: 200% auto;
+      color: transparent;
+      -webkit-background-clip: text;
+      background-clip: text;
+    }
+
+    .content-card .last-updated {
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+      margin-bottom: 40px;
+      border-bottom: 1px solid var(--glass-border);
+      padding-bottom: 20px;
+      opacity: 0.7;
+    }
+
+    .content-card h2 {
+      font-size: 1.6rem;
+      color: var(--text-primary);
+      margin-top: 40px;
+      margin-bottom: 18px;
+      position: relative;
+      padding-left: 15px;
+    }
+
+    .content-card h2::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 5px;
+      bottom: 5px;
+      width: 4px;
+      background: var(--accent-cyan);
+      border-radius: 4px;
+      box-shadow: 0 0 10px rgba(0, 229, 255, 0.4);
+    }
+
+    .content-card h3 {
+      font-size: 1.2rem;
+      color: var(--text-primary);
+      margin-top: 25px;
+      margin-bottom: 12px;
+    }
+
+    .content-card p {
+      font-size: 1.02rem;
+      color: var(--text-secondary);
+      line-height: 1.7;
+      margin-bottom: 18px;
+    }
+
+    .content-card ul,
+    .content-card ol {
+      margin-bottom: 20px;
+      padding-left: 20px;
+      color: var(--text-secondary);
+    }
+
+    .content-card li {
+      margin-bottom: 10px;
+      line-height: 1.6;
+    }
+
+    .highlight-box {
+      background: rgba(0, 229, 255, 0.05);
+      border-left: 4px solid var(--accent-cyan);
+      padding: 20px 24px;
+      margin: 25px 0;
+      border-radius: 0 12px 12px 0;
+      color: #fff;
+    }
+
+    .highlight-box .highlight-title {
+      font-weight: 600;
+      color: var(--accent-cyan);
+      margin-bottom: 8px;
+      font-size: 1.05rem;
+    }
+
+    .contact-card {
+      background: rgba(0, 229, 255, 0.04);
+      border: 1px solid rgba(0, 229, 255, 0.15);
+      border-radius: 14px;
+      padding: 28px;
+      margin: 25px 0;
+      text-align: center;
+    }
+
+    .contact-card .email-link {
+      display: inline-block;
+      font-size: 1.3rem;
+      font-weight: 600;
+      color: var(--accent-cyan);
+      text-decoration: none;
+      padding: 12px 28px;
+      border: 1px solid rgba(0, 229, 255, 0.3);
+      border-radius: 10px;
+      margin-top: 12px;
+      transition: all 0.3s ease;
+    }
+
+    .contact-card .email-link:hover {
+      background: rgba(0, 229, 255, 0.1);
+      box-shadow: 0 0 25px rgba(0, 229, 255, 0.2);
+      transform: translateY(-2px);
+    }
+
+    .step-list {
+      counter-reset: step;
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .step-list li {
+      counter-increment: step;
+      position: relative;
+      padding-left: 50px;
+      margin-bottom: 20px;
+      min-height: 36px;
+      display: flex;
+      align-items: center;
+    }
+
+    .step-list li::before {
+      content: counter(step);
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 36px;
+      height: 36px;
+      background: rgba(0, 229, 255, 0.08);
+      border: 1px solid rgba(0, 229, 255, 0.25);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      color: var(--accent-cyan);
+      font-size: 0.95rem;
+    }
+
+    .divider {
+      border: none;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      margin: 35px 0;
+    }
+
+    @media (max-width: 768px) {
+      .landing-container {
+        padding: 100px 16px 40px;
+      }
+
+      .content-card {
+        padding: 30px 20px;
+      }
+
+      .content-card h1 {
+        font-size: 1.7rem;
+      }
+
+      .step-list li {
+        padding-left: 44px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="landing-container">
+    <div class="back-nav">
+      <a href="index.html" class="btn btn-secondary">
+        <i class="fa-solid fa-arrow-left"></i> Volver al Inicio
+      </a>
+    </div>
+
+    <div class="content-card">
+      <h1>Política de Eliminación de Datos</h1>
+      <div class="last-updated">Última actualización: 3 de mayo de 2026</div>
+
+      <!-- INTRO -->
+      <p>En <strong>StudioContent</strong>, creemos que tú tienes el control absoluto sobre tu información. Esta
+        <strong>Política de Eliminación de Datos</strong> describe de forma clara y transparente cómo puedes solicitar
+        la eliminación total y permanente de todos tus datos personales de nuestros sistemas.
+      </p>
+
+      <div class="highlight-box">
+        <div class="highlight-title"><i class="fa-solid fa-trash-can"></i> Tu derecho a eliminar</div>
+        <p style="margin-bottom: 0;">Puedes solicitar la eliminación de <strong>todos tus datos en cualquier
+            momento</strong>, sin necesidad de justificación. No hay período mínimo de permanencia ni condiciones
+          ocultas. Cumplimos con los Términos de la Plataforma de Meta y con el RGPD.</p>
+      </div>
+
+      <!-- SECCIÓN 1: QUÉ DATOS ESTÁN SUJETOS A ELIMINACIÓN -->
+      <h2>1. Qué datos puedes solicitar eliminar</h2>
+      <p>StudioContent almacena los siguientes tipos de datos, todos ellos sujetos a eliminación bajo solicitud:</p>
+      <ul>
+        <li><strong>Datos de perfil de Facebook/Instagram:</strong> nombre, foto de perfil e ID de usuario (app-scoped
+          ID) obtenidos mediante Facebook Login.</li>
+        <li><strong>Datos de interacción:</strong> contenido publicado, programaciones y configuraciones de campañas
+          creadas a través de nuestros agentes de IA.</li>
+        <li><strong>Datos de uso:</strong> páginas visitadas, tiempo de sesión y preferencias dentro de StudioContent.
+        </li>
+        <li><strong>Datos de contacto:</strong> correo electrónico y nombre asociados a tu cuenta.</li>
+        <li><strong>Tokens de acceso:</strong> tokens de autenticación de Facebook/Instagram.</li>
+        <li><strong>Metadatos:</strong> cualquier otro dato derivado de tu actividad en la plataforma.</li>
+      </ul>
+
+      <!-- SECCIÓN 2: MÉTODOS DE ELIMINACIÓN -->
+      <h2>2. Cómo solicitar la eliminación de tus datos</h2>
+      <p>Tienes <strong>tres métodos</strong> disponibles para solicitar la eliminación. Elige el que prefieras:</p>
+
+      <h3>Método A: Correo electrónico directo</h3>
+      <p>Envíanos un email con el asunto <strong>"Solicitud de Eliminación de Datos"</strong>. Es el método más directo
+        y
+        recibirás confirmación en menos de 48 horas.</p>
+
+      <div class="contact-card">
+        <p style="margin-bottom: 6px; font-weight: 500;">Dirección de contacto:</p>
+        <a href="mailto:contacto@studiocontent.net" class="email-link">
+          <i class="fa-solid fa-envelope"></i> contacto@studiocontent.net
+        </a>
+        <p style="margin-top: 14px; font-size: 0.85rem; opacity: 0.6;">Asunto recomendado: "Solicitud de Eliminación de
+          Datos"</p>
+      </div>
+
+      <h3>Método B: Desde Facebook / Instagram</h3>
+      <p>Si accediste mediante Facebook Login, puedes solicitar la eliminación directamente desde la configuración de
+        Meta sin necesidad de contactarnos:</p>
+      <ol class="step-list">
+        <li>Ve a <strong>Configuración y privacidad</strong> en Facebook.</li>
+        <li>Selecciona <strong>Configuración → Apps y sitios web</strong>.</li>
+        <li>Busca <strong>StudioContent</strong> en tu lista de apps conectadas.</li>
+        <li>Selecciona la app y haz clic en <strong>Eliminar</strong>.</li>
+        <li>Marca la casilla <strong>"Solicitar eliminación de datos"</strong> y confirma.</li>
+      </ol>
+      <p>Meta nos notificará automáticamente y procederemos a eliminar tus datos de inmediato.</p>
+
+      <h3>Método C: Botón de solicitud rápida</h3>
+      <p>Haz clic en el botón de abajo para abrir tu cliente de correo con el asunto y destinatario ya preparados.</p>
+      <div class="contact-card">
+        <a href="mailto:contacto@studiocontent.net?subject=Solicitud%20de%20Eliminaci%C3%B3n%20de%20Datos"
+          class="email-link" style="display: inline-flex; align-items: center; gap: 10px;">
+          <i class="fa-solid fa-paper-plane"></i> Solicitar Eliminación de Datos
+        </a>
+        <p style="margin-top: 14px; font-size: 0.85rem; opacity: 0.6;">Listo en un clic. Sin formularios ni preguntas.
+        </p>
+      </div>
+
+      <hr class="divider" />
+
+      <!-- SECCIÓN 3: PROCESO DE ELIMINACIÓN -->
+      <h2>3. Proceso de eliminación paso a paso</h2>
+      <p>Una vez recibida tu solicitud, esto es lo que sucede:</p>
+      <ol class="step-list">
+        <li><strong>Confirmación de recepción:</strong> te enviamos un código único de confirmación en menos de 48
+          horas.</li>
+        <li><strong>Identificación de datos:</strong> localizamos todos tus datos en nuestros sistemas activos y
+          backups.</li>
+        <li><strong>Eliminación permanente:</strong> borramos tu información mediante sobrescritura criptográfica (no
+          recuperable).</li>
+        <li><strong>Notificación final:</strong> te informamos por email cuando el proceso se haya completado.</li>
+      </ol>
+
+      <div class="highlight-box">
+        <div class="highlight-title"><i class="fa-solid fa-clock"></i> Plazo máximo de ejecución</div>
+        <p style="margin-bottom: 0;">Todo el proceso se completa en un máximo de <strong>7 días hábiles</strong>. En la
+          mayoría de los casos, tus datos quedan eliminados en <strong>48 horas</strong>.</p>
+      </div>
+
+      <hr class="divider" />
+
+      <!-- SECCIÓN 4: ALCANCE DE LA ELIMINACIÓN -->
+      <h2>4. Qué se elimina exactamente</h2>
+      <p>La eliminación es <strong>total, permanente e irreversible</strong>. Esto incluye:</p>
+      <ul>
+        <li>Tu cuenta de usuario completa en StudioContent.</li>
+        <li>Tokens de acceso a Facebook e Instagram.</li>
+        <li>Historial completo de publicaciones y programaciones.</li>
+        <li>Configuraciones de campañas, agentes y automatizaciones.</li>
+        <li>Datos de perfil público obtenidos de Meta (nombre, foto, ID).</li>
+        <li>Todos los metadatos, logs y registros de actividad asociados.</li>
+        <li>Copias en sistemas de respaldo (se eliminan en el mismo ciclo).</li>
+      </ul>
+
+      <div class="highlight-box">
+        <div class="highlight-title"><i class="fa-solid fa-circle-check"></i> Eliminación verificable</div>
+        <p style="margin-bottom: 0;">Una vez completado el proceso, <strong>no conservamos ninguna copia</strong> de tus
+          datos. Si vuelves a usar StudioContent en el futuro, deberás crear una cuenta nueva desde cero.</p>
+      </div>
+
+      <hr class="divider" />
+
+      <!-- SECCIÓN 5: ELIMINACIÓN AUTOMÁTICA POR INACTIVIDAD -->
+      <h2>5. Eliminación automática por inactividad</h2>
+      <p>Además de la solicitud manual, StudioContent elimina datos automáticamente en los siguientes casos:</p>
+      <ul>
+        <li><strong>Cuentas inactivas:</strong> si no utilizas la plataforma durante <strong>90 días
+            consecutivos</strong>, tus datos se eliminan automáticamente.</li>
+        <li><strong>Tokens revocados:</strong> si revocas nuestro acceso desde Facebook/Instagram, eliminamos tus datos
+          asociados en un plazo de 7 días.</li>
+        <li><strong>Cierres de cuenta:</strong> la eliminación se ejecuta automáticamente al cerrar tu cuenta desde el
+          panel de configuración.</li>
+      </ul>
+
+      <hr class="divider" />
+
+      <!-- SECCIÓN 6: SEGURIDAD EN LA ELIMINACIÓN -->
+      <h2>6. Cómo garantizamos una eliminación segura</h2>
+      <p>Utilizamos los siguientes métodos para asegurar que tus datos no puedan ser recuperados:</p>
+      <ul>
+        <li><strong>Sobrescritura criptográfica:</strong> los datos se sobrescriben múltiples veces antes de eliminar el
+          almacenamiento físico.</li>
+        <li><strong>Cifrado en tránsito:</strong> todas las comunicaciones usan HTTPS (TLS 1.3).</li>
+        <li><strong>Acceso restringido:</strong> solo personal autorizado puede ejecutar el proceso de eliminación.</li>
+        <li><strong>Auditoría interna:</strong> cada eliminación queda registrada en un log de cumplimiento (sin datos
+          personales).</li>
+      </ul>
+
+      <hr class="divider" />
+
+      <!-- SECCIÓN 7: PREGUNTAS FRECUENTES -->
+      <h2>7. Preguntas frecuentes</h2>
+
+      <h3>¿Necesito dar una razón para eliminar mis datos?</h3>
+      <p>No. Puedes solicitar la eliminación sin ninguna justificación. Es tu derecho.</p>
+
+      <h3>¿Afecta esto a mis cuentas de Facebook o Instagram?</h3>
+      <p>No. Solo eliminamos los datos dentro de StudioContent. Tus cuentas de Meta permanecen intactas.</p>
+
+      <h3>¿Puedo recuperar mis datos después de la eliminación?</h3>
+      <p>No. La eliminación es permanente e irreversible. Si quieres volver a usar StudioContent, deberás crear una
+        cuenta nueva.</p>
+
+      <h3>¿Cuánto tarda realmente?</h3>
+      <p>La mayoría de las solicitudes se completan en 48 horas. El plazo máximo garantizado es de 7 días hábiles.</p>
+
+      <h3>¿Qué pasa con el contenido que ya publiqué en redes sociales?</h3>
+      <p>El contenido ya publicado en Facebook/Instagram no se ve afectado. Solo eliminamos los datos dentro de
+        StudioContent.</p>
+
+      <hr class="divider" />
+
+      <!-- SECCIÓN 8: CAMBIOS Y CONTACTO -->
+      <h2>8. Cambios en esta política</h2>
+      <p>Cualquier modificación será notificada con al menos 15 días de antelación mediante un aviso visible en nuestra
+        plataforma y por correo electrónico a los usuarios activos.</p>
+
+      <h2>9. Contacto</h2>
+      <p>Si tienes preguntas sobre el proceso de eliminación o sobre cómo manejamos tus datos:</p>
+      <div class="contact-card">
+        <p style="margin-bottom: 6px;"><strong><i class="fa-solid fa-user-shield"></i> Delegado de Protección de
+            Datos</strong></p>
+        <a href="mailto:contacto@studiocontent.net" style="color: var(--text-secondary); text-decoration: none;">
+          contacto@studiocontent.net
+        </a>
+        <p style="margin-top: 10px; font-size: 0.85rem; opacity: 0.6;">Tiempo de respuesta: 48 horas hábiles</p>
+      </div>
+
+    </div>
+  </div>
+
+</body>
+
+</html>

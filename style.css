@@ -940,3 +940,146 @@ section {
         font-size: 0.95rem;
     }
 }
+
+/* ==========================================
+   Purchase Popup Modal
+   ========================================== */
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(8px);
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+.modal-overlay.active {
+    opacity: 1;
+    pointer-events: all;
+}
+.modal-popup {
+    background: #0a0a0a;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 20px;
+    padding: 2.5rem 2rem;
+    max-width: 440px;
+    width: 90%;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 0 80px rgba(0, 229, 255, 0.25), 0 0 200px rgba(0, 229, 255, 0.08);
+    transform: translateY(20px) scale(0.97);
+    transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.modal-overlay.active .modal-popup {
+    transform: translateY(0) scale(1);
+}
+.modal-close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.1);
+    color: var(--text-secondary);
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    font-size: 1.2rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s;
+    line-height: 1;
+}
+.modal-close:hover {
+    background: rgba(255,255,255,0.1);
+    color: #fff;
+    border-color: rgba(0, 229, 255, 0.4);
+}
+.modal-badge {
+    background: var(--gradient-primary);
+    color: #fff;
+    padding: 0.4rem 1.2rem;
+    border-radius: 50px;
+    font-size: 0.75rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+    display: inline-block;
+    margin-bottom: 1.5rem;
+    animation: pulseBadge 2s ease-in-out infinite;
+}
+.modal-popup h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-primary);
+}
+.modal-popup .modal-subtitle {
+    color: var(--text-secondary);
+    font-size: 0.85rem;
+    margin-bottom: 1.5rem;
+}
+.modal-popup .price {
+    font-size: 3rem;
+    font-weight: 800;
+    margin: 1rem 0;
+}
+.modal-popup .old-price {
+    font-size: 1.2rem;
+    text-decoration: line-through;
+    opacity: 0.5;
+}
+.modal-popup .features-list {
+    text-align: left;
+    margin: 1.5rem 0;
+    list-style: none;
+}
+.modal-popup .features-list li {
+    margin-bottom: 0.7rem;
+    display: flex;
+    align-items: center;
+    font-size: 0.9rem;
+    color: var(--text-primary);
+}
+.modal-popup .features-list li::before {
+    content: '✓';
+    color: var(--accent-cyan);
+    margin-right: 10px;
+    font-weight: bold;
+}
+.modal-btn-cart {
+    background: var(--gradient-primary);
+    color: #fff;
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.1rem;
+    display: inline-block;
+    width: 100%;
+    border: 1px solid rgba(0, 229, 255, 0.3);
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 10px 30px -10px rgba(0, 229, 255, 0.5);
+    box-sizing: border-box;
+}
+.modal-btn-cart:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 20px 45px -10px rgba(0, 229, 255, 0.8);
+}
+.modal-secure {
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+    margin-top: 1rem;
+}
+@media (max-width: 768px) {
+    .modal-popup {
+        padding: 2rem 1.2rem;
+    }
+    .modal-popup .price {
+        font-size: 2.5rem;
+    }
+}

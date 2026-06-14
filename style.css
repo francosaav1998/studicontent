@@ -423,6 +423,13 @@
             width: max-content;
             gap: 16px;
             animation: marquee 35s linear infinite;
+            will-change: transform;
+            transform: translate3d(0, 0, 0);
+            backface-visibility: hidden;
+        }
+
+        .marquee-wrap:hover .marquee-track {
+            animation-play-state: paused;
         }
 
         @keyframes marquee {

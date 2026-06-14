@@ -1220,6 +1220,21 @@
             color: var(--text-muted);
         }
 
+        .modal-disclaimer {
+            font-size: 0.7rem;
+            color: var(--text-muted);
+            margin-top: 10px;
+            line-height: 1.4;
+        }
+
+        .disclaimer-muted {
+            text-align: center;
+            margin-top: 24px;
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            line-height: 1.5;
+        }
+
         @media (max-width: 480px) {
             .modal-content {
                 padding: 28px 22px;

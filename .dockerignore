@@ -3,3 +3,12 @@
 .gemini
 .tempmediaStorage
 node_modules
+tunnel_log.txt
+*.log
+.env
+.env.local
+.DS_Store
+Thumbs.db
+*.bak
+README.md
+compose-dns.yml

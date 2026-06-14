@@ -2,344 +2,305 @@
 <html lang="es">
 
 <head>
-    <meta name="facebook-domain-verification" content="7pdol84mb569cyq6m01v27qlrrxi2m" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AI Content Studio | El Workflow Definitivo de Generación de Contenido</title>
-    <meta name="description"
-        content="Genera artículos, redes sociales y guiones con IA en minutos. Workflow replicable.">
-    <link rel="stylesheet" href="style.css">
+    <meta name="description" content="Genera artículos, redes sociales y guiones con IA en minutos. Workflow replicable.">
+    <meta property="og:title" content="AI Content Studio | El Workflow Definitivo de Generación de Contenido">
+    <meta property="og:description" content="Genera artículos, redes sociales y guiones con IA en minutos. Workflow replicable.">
+    <meta property="og:type" content="product">
+    <meta property="og:url" content="https://tu-dominio.com/">
+    <meta property="og:image" content="https://tu-dominio.com/hero.webp">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="product:price:amount" content="12.99">
+    <meta property="product:price:currency" content="USD">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="AI Content Studio | El Workflow Definitivo de Generación de Contenido">
+    <meta name="twitter:description" content="Genera artículos, redes sociales y guiones con IA en minutos.">
+    <meta name="twitter:image" content="https://tu-dominio.com/hero.webp">
+    <link rel="icon" type="image/png" href="hero.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
 
     <!-- Meta Pixel Code -->
     <script>
-        !function (f, b, e, v, n, t, s) {
-            if (f.fbq) return; n = f.fbq = function () {
-                n.callMethod ?
-                    n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+        !function(f, b, e, v, n, t, s) {
+            if (f.fbq) return;
+            n = f.fbq = function() {
+                n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments)
             };
-            if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
-            n.queue = []; t = b.createElement(e); t.async = !0;
-            t.src = v; s = b.getElementsByTagName(e)[0];
+            if (!f._fbq) f._fbq = n;
+            n.push = n;
+            n.loaded = !0;
+            n.version = '2.0';
+            n.queue = [];
+            t = b.createElement(e);
+            t.async = !0;
+            t.src = v;
+            s = b.getElementsByTagName(e)[0];
             s.parentNode.insertBefore(t, s)
-        }(window, document, 'script',
-            'https://connect.facebook.net/en_US/fbevents.js');
+        }(window, document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
         fbq('init', '1442973510807376');
         fbq('track', 'PageView');
     </script>
-    <noscript><img height="1" width="1" style="display:none"
-            src="https://www.facebook.com/tr?id=1442973510807376&ev=PageView&noscript=1" /></noscript>
-    <!-- End Meta Pixel Code -->
+    <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1442973510807376&ev=PageView&noscript=1"/></noscript>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Product",
+        "name": "AI Content Generation Workflow",
+        "image": "https://tu-dominio.com/hero.webp",
+        "description": "Genera artículos, redes sociales y guiones con IA en minutos. Workflow replicable.",
+        "brand": {
+            "@type": "Brand",
+            "name": "StudioContent"
+        },
+        "offers": {
+            "@type": "Offer",
+            "url": "https://studiocontent-2.myshopify.com/checkouts/cn/hWNBkks9FLQfvspWNMtIeaUk/es-cl",
+            "price": "12.99",
+            "priceCurrency": "USD",
+            "availability": "https://schema.org/InStock"
+        }
+    }
+    </script>
 </head>
 
 <body>
 
-    <header id="main-header">
-        <div class="container nav-wrapper">
-            <nav>
-                <div class="logo">STUDIO<span class="gradient-text">CONTENT</span></div>
-                <ul class="nav-links">
-                    <li><a href="#resultados">Resultados</a></li>
-                    <li><a href="#como-funciona">Cómo funciona</a></li>
-                    <li><a href="#incluye">Qué incluye</a></li>
-                    <li><a href="privacidad.html">Privacidad</a></li>
-                </ul>
-                <a href="https://studiocontent-2.myshopify.com/checkouts/cn/hWNBkks9FLQfvspWNMtIeaUk/es-cl" target="_blank" class="btn-primary btn-bounce"
-                    style="padding: 0.5rem 1.5rem; width: auto; font-size: 0.9rem;">Comprar</a>
-            </nav>
+    <div class="ambient-bg">
+        <canvas id="node-canvas"></canvas>
+    </div>
+
+    <!-- NAVBAR -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-brand">
+            <div class="nav-logo-dot"></div>
+            <span class="nav-title">StudioContent</span>
         </div>
-    </header>
+        <ul class="nav-links" id="nav-links">
+            <li><a href="#resultados">Resultados</a></li>
+            <li><a href="#como-funciona">Cómo funciona</a></li>
+            <li><a href="#incluye">Qué incluye</a></li>
+            <li><a href="#faq">FAQ</a></li>
+            <li><a href="privacidad.html">Privacidad</a></li>
+        </ul>
+        <a href="https://studiocontent-2.myshopify.com/checkouts/cn/hWNBkks9FLQfvspWNMtIeaUk/es-cl" target="_blank" class="nav-cta">Comprar</a>
+        <button class="menu-toggle" id="menu-toggle" aria-label="Menu">&#9776;</button>
+    </nav>
 
     <main>
-        <!-- Hero Section -->
+        <!-- HERO -->
         <section class="hero reveal">
             <div class="container">
-                <div class="badge">automatiza tu contenido con ia </div>
+                <div class="hero-badge"><span class="live-dot"></span> automatiza tu contenido con ia</div>
                 <h1 class="hero-title">
-                    <span class="magenta-text text-block">Contenido De Marca</span>
-                    <span class="white-text text-block">En 10 Minutos Con IA</span>
-                    <span class="magenta-text text-block">Flujos de trabajo</span>
+                    <span class="line accent">Contenido De Marca</span>
+                    <span class="line">En 10 Minutos Con IA</span>
+                    <span class="line accent">Flujos de trabajo</span>
                 </h1>
-                <p>Desarrolla todo tu plan mensual de contenido con IA en minutos. Pasa de bloqueos creativos a
-                    resultados comerciales inmediatos.</p>
-
-
-
-                <a href="#comprar" class="btn-primary btn-hero"
-                    style="margin: 1.5rem auto 2rem; display: inline-block;">Adquiérelo hoy por $12.99<br><span
-                        style="font-size: 0.8rem; font-weight: normal;">Precio normal $39.99</span></a>
-
-                <div class="pills-container">
-                    <div class="pill">SIN REDACTORES</div>
-                    <div class="pill">SIN DISEÑADORES</div>
-                    <div class="pill">SIN AGENCIA</div>
-                    <div class="pill">SIN IMPROVISAR</div>
+                <p class="hero-subtitle">Desarrolla todo tu plan mensual de contenido con IA en minutos. Pasa de bloqueos creativos a resultados comerciales inmediatos.</p>
+                <div class="hero-actions">
+                    <a href="#comprar" class="btn btn-primary btn-lg">Adquiérelo hoy por $12.99<br><small style="font-size:0.75rem;font-weight:400">Precio normal $39.99</small></a>
+                </div>
+                <div class="hero-pills">
+                    <span class="hero-pill">SIN REDACTORES</span>
+                    <span class="hero-pill">SIN DISEÑADORES</span>
+                    <span class="hero-pill">SIN AGENCIA</span>
+                    <span class="hero-pill">SIN IMPROVISAR</span>
                 </div>
 
-                <!-- Marquee Carousel de Resultados -->
-                <div class="marquee-container" style="margin-bottom: 3rem;">
-                    <!-- Difuminados a los lados para efecto infinity -->
-                    <div class="marquee-fade-left"></div>
-                    <div class="marquee-fade-right"></div>
-
-                    <!-- Carrusel Superior (de derecha a izquierda) -->
+                <!-- Marquee -->
+                <div class="marquee-wrap">
+                    <div class="marquee-fade left"></div>
+                    <div class="marquee-fade right"></div>
                     <div class="marquee-track">
-                        <!-- Grupo 1 -->
-                        <div class="marquee-item">
-                            <div class="marquee-item-glow"></div><img src="img1.png" alt="Creativo AI 1" loading="lazy">
-                        </div>
-                        <div class="marquee-item">
-                            <div class="marquee-item-glow"></div><img src="img2.png" alt="Creativo AI 2" loading="lazy">
-                        </div>
-                        <div class="marquee-item">
-                            <div class="marquee-item-glow"></div><img src="img3.png" alt="Creativo AI 3" loading="lazy">
-                        </div>
-                        <div class="marquee-item">
-                            <div class="marquee-item-glow"></div><img src="img4.png" alt="Creativo AI 4" loading="lazy">
-                        </div>
-                        <div class="marquee-item">
-                            <div class="marquee-item-glow"></div><img src="img5.png" alt="Creativo AI 5" loading="lazy">
-                        </div>
-                        <div class="marquee-item">
-                            <div class="marquee-item-glow"></div><img src="img6.png" alt="Creativo AI 6" loading="lazy">
-                        </div>
-                        <!-- Grupo 2 (Duplicado exacto para hacer el loop) -->
-                        <div class="marquee-item">
-                            <div class="marquee-item-glow"></div><img src="img1.png" alt="Creativo AI 1" loading="lazy">
-                        </div>
-                        <div class="marquee-item">
-                            <div class="marquee-item-glow"></div><img src="img2.png" alt="Creativo AI 2" loading="lazy">
-                        </div>
-                        <div class="marquee-item">
-                            <div class="marquee-item-glow"></div><img src="img3.png" alt="Creativo AI 3" loading="lazy">
-                        </div>
-                        <div class="marquee-item">
-                            <div class="marquee-item-glow"></div><img src="img4.png" alt="Creativo AI 4" loading="lazy">
-                        </div>
-                        <div class="marquee-item">
-                            <div class="marquee-item-glow"></div><img src="img5.png" alt="Creativo AI 5" loading="lazy">
-                        </div>
-                        <div class="marquee-item">
-                            <div class="marquee-item-glow"></div><img src="img6.png" alt="Creativo AI 6" loading="lazy">
-                        </div>
+                        <div class="marquee-item"><picture><source srcset="img1.webp" type="image/webp"><img src="img1.png" alt="Creativo AI 1" loading="lazy"></picture></div>
+                        <div class="marquee-item"><picture><source srcset="img2.webp" type="image/webp"><img src="img2.png" alt="Creativo AI 2" loading="lazy"></picture></div>
+                        <div class="marquee-item"><picture><source srcset="img3.webp" type="image/webp"><img src="img3.png" alt="Creativo AI 3" loading="lazy"></picture></div>
+                        <div class="marquee-item"><picture><source srcset="img4.webp" type="image/webp"><img src="img4.png" alt="Creativo AI 4" loading="lazy"></picture></div>
+                        <div class="marquee-item"><picture><source srcset="img5.webp" type="image/webp"><img src="img5.png" alt="Creativo AI 5" loading="lazy"></picture></div>
+                        <div class="marquee-item"><picture><source srcset="img6.webp" type="image/webp"><img src="img6.png" alt="Creativo AI 6" loading="lazy"></picture></div>
+                        <div class="marquee-item"><picture><source srcset="img1.webp" type="image/webp"><img src="img1.png" alt="Creativo AI 1" loading="lazy"></picture></div>
+                        <div class="marquee-item"><picture><source srcset="img2.webp" type="image/webp"><img src="img2.png" alt="Creativo AI 2" loading="lazy"></picture></div>
+                        <div class="marquee-item"><picture><source srcset="img3.webp" type="image/webp"><img src="img3.png" alt="Creativo AI 3" loading="lazy"></picture></div>
+                        <div class="marquee-item"><picture><source srcset="img4.webp" type="image/webp"><img src="img4.png" alt="Creativo AI 4" loading="lazy"></picture></div>
+                        <div class="marquee-item"><picture><source srcset="img5.webp" type="image/webp"><img src="img5.png" alt="Creativo AI 5" loading="lazy"></picture></div>
+                        <div class="marquee-item"><picture><source srcset="img6.webp" type="image/webp"><img src="img6.png" alt="Creativo AI 6" loading="lazy"></picture></div>
                     </div>
-
                 </div>
 
-                <p style="font-size: 1rem; color: var(--text-secondary); max-width: 800px; margin: 0 auto 2rem;">
-                    Después de tu compra accedes a una plataforma donde te enseñamos paso a paso a crear workflows
-                    personalizados.
-                    Duplicas el sistema completo con un clic y lo adaptas a tu marca en minutos.
-                </p>
+                <p style="font-size:1rem;color:var(--text-secondary);max-width:700px;margin:20px auto 0;">Después de tu compra accedes a una plataforma donde te enseñamos paso a paso a crear workflows personalizados. Duplicas el sistema completo con un clic y lo adaptas a tu marca en minutos.</p>
 
-                <div style="margin-top: 3rem; text-align: center;">
-                    <h3 style="font-size: 1.2rem; margin-bottom: 0.5rem;">Un sistema replicable para crear marketing
-                    </h3>
-                    <p style="color: var(--text-secondary); font-size: 0.9rem;">Escribe tus posts en masa y produce
-                        campañas listas para web, ads y redes sociales.</p>
-                    <a href="#comprar" class="btn-primary" style="margin-top: 1rem;">Comprar hoy por $12.99 USD<br><span
-                            style="font-size: 0.8rem; font-weight: normal;">Descuento del 70% hoy.</span></a>
+                <div style="margin-top:40px;text-align:center;">
+                    <h3 style="font-family:var(--font-heading);font-size:1.2rem;margin-bottom:8px;">Un sistema replicable para crear marketing</h3>
+                    <p style="color:var(--text-secondary);font-size:0.9rem;">Escribe tus posts en masa y produce campañas listas para web, ads y redes sociales.</p>
+                    <a href="#comprar" class="btn btn-primary" style="margin-top:16px;">Comprar hoy por $12.99 USD<br><small style="font-size:0.75rem;font-weight:400">Descuento del 70% hoy.</small></a>
                 </div>
             </div>
         </section>
 
-        <!-- Resultados Section -->
-        <section id="resultados" class="reveal"
-            style="background: rgba(255,255,255,0.02); border-top: 1px solid var(--glass-border); border-bottom: 1px solid var(--glass-border);">
-            <div class="container text-center">
-                <div class="section-head">
-                    <h2>Lo que puedes producir en menos de 15 minutos</h2>
-                    <p style="color: var(--text-secondary); max-width: 600px; margin: 0 auto;">Sube tu idea principal y
-                        obtén un set completo listo para blogs, Ads y redes sociales.</p>
+        <!-- RESULTADOS -->
+        <section id="resultados" class="section-alt reveal">
+            <div class="container">
+                <div class="section-header">
+                    <div class="section-tag">Resultados</div>
+                    <h2 class="section-title">Lo que puedes producir en menos de 15 minutos</h2>
+                    <p class="section-desc">Sube tu idea principal y obtén un set completo listo para blogs, Ads y redes sociales.</p>
                 </div>
 
                 <div class="bento-grid">
-                    <div class="bento-item bento-1 glass" style="text-align: left;">
+                    <div class="bento-card span-2">
+                        <div class="bento-icon">&#9673;</div>
                         <h3>Ecosistemas de Contenido</h3>
-                        <p> Genera múltiples publicaciones, reels e hilos adaptados a cada plataforma con un click.</p>
+                        <p>Genera múltiples publicaciones, reels e hilos adaptados a cada plataforma con un click.</p>
                     </div>
-                    <div class="bento-item bento-2 glass" style="text-align: left;">
-                        <h3>Workflows automaticos</h3>
-                        <p>crea contenido con ia para Instagram, Twitter y LinkedIn de forma coherente.</p>
+                    <div class="bento-card">
+                        <div class="bento-icon">&#9881;</div>
+                        <h3>Workflows automáticos</h3>
+                        <p>Crea contenido con IA para Instagram, Twitter y LinkedIn de forma coherente.</p>
                     </div>
-                    <div class="bento-item bento-3 glass" style="text-align: left;">
+                    <div class="bento-card">
+                        <div class="bento-icon">&#9733;</div>
                         <h3>Estrategia de Marca</h3>
                         <p>Define tu tono de voz y pilares de contenido con precisión quirúrgica.</p>
                     </div>
-                    <div class="bento-item bento-4 glass" style="text-align: left;">
-                        <h3>Crea tu calendario mensual en minutos con ia</h3>
-                        <p>Estructuras de copy que retienen a la audiencia, workflows con IA automatizados para crear
-                            piezas para todas tus redes sociales de manera profesional en tiempo récord.</p>
+                    <div class="bento-card span-2">
+                        <div class="bento-icon">&#128197;</div>
+                        <h3>Crea tu calendario mensual en minutos con IA</h3>
+                        <p>Estructuras de copy que retienen a la audiencia, workflows con IA automatizados para crear piezas para todas tus redes sociales de manera profesional en tiempo récord.</p>
                     </div>
                 </div>
 
-                <div style="margin-top: 3rem; text-align: center;">
-                    <a href="#comprar" class="btn-primary">Adquiérelo hoy por $12.99<br><span
-                            style="font-size: 0.8rem; font-weight: normal;">Precio normal $39.99</span></a>
+                <div style="text-align:center;margin-top:40px;">
+                    <a href="#comprar" class="btn btn-primary btn-lg">Adquiérelo hoy por $12.99<br><small style="font-size:0.75rem;font-weight:400">Precio normal $39.99</small></a>
                 </div>
             </div>
         </section>
 
-        <!-- Escala tu contenido -->
+        <!-- ESCALA TU CONTENIDO -->
         <section class="reveal">
             <div class="container">
-                <div class="section-head">
-                    <h2>Escala tu contenido sin perder calidad.</h2>
-                    <p style="color: var(--text-secondary); max-width: 700px; margin: 0 auto;">Produce más piezas de
-                        contenido a partir de una idea para tus redes sociales y campañas publicitarias sin sacrificar
-                        el
-                        tono de voz de tu marca.</p>
+                <div class="section-header">
+                    <div class="section-tag">Escalabilidad</div>
+                    <h2 class="section-title">Escala tu contenido sin perder calidad.</h2>
+                    <p class="section-desc">Produce más piezas de contenido a partir de una idea para tus redes sociales y campañas publicitarias sin sacrificar el tono de voz de tu marca.</p>
                 </div>
-                <div style="display: flex; gap: 2rem; justify-content: center; flex-wrap: wrap;">
-                    <div class="glass" style="padding: 1.5rem; border-radius: 12px; flex: 1; min-width: 250px;">
-                        <span style="color: var(--accent-cyan); font-size: 1.5rem;">✦</span>
-                        <h4 style="margin: 0.5rem 0;">Genera posteos, hilos y guiones con IA</h4>
+                <div class="value-grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
+                    <div class="glass value-card">
+                        <div class="icon" style="color:var(--accent-cyan);">&#10025;</div>
+                        <h4>Genera posteos, hilos y guiones con IA</h4>
                     </div>
-                    <div class="glass" style="padding: 1.5rem; border-radius: 12px; flex: 1; min-width: 250px;">
-                        <span style="color: var(--accent-cyan); font-size: 1.5rem;">✦</span>
-                        <h4 style="margin: 0.5rem 0;">Cambia estilos o canales sin rehacer todo</h4>
+                    <div class="glass value-card">
+                        <div class="icon" style="color:var(--accent-purple);">&#10025;</div>
+                        <h4>Cambia estilos o canales sin rehacer todo</h4>
                     </div>
-                    <div class="glass" style="padding: 1.5rem; border-radius: 12px; flex: 1; min-width: 250px;">
-                        <span style="color: var(--accent-cyan); font-size: 1.5rem;">✦</span>
-                        <h4 style="margin: 0.5rem 0;">Convierte blogs en reels listos para grabar</h4>
+                    <div class="glass value-card">
+                        <div class="icon" style="color:var(--accent-cyan);">&#10025;</div>
+                        <h4>Convierte blogs en reels listos para grabar</h4>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Comparativa -->
-        <section id="como-funciona" class="reveal"
-            style="background: rgba(255,255,255,0.02); border-top: 1px solid var(--glass-border);">
+        <!-- COMPARATIVA -->
+        <section id="como-funciona" class="section-alt reveal">
             <div class="container">
-                <div class="section-head">
-                    <h2>De "un entregable de 30 días" a producir tu campaña en 15 minutos.</h2>
-                    <p style="color: var(--text-secondary); max-width: 700px; margin: 0 auto;">Este workflow es un
-                        sistema replicable: subes tus ideas, sigues el flujo y generas un ecosistema comercial listo
-                        para vender.</p>
+                <div class="section-header">
+                    <div class="section-tag">El sistema</div>
+                    <h2 class="section-title">De "un entregable de 30 días" a producir tu campaña en 15 minutos.</h2>
+                    <p class="section-desc">Este workflow es un sistema replicable: subes tus ideas, sigues el flujo y generas un ecosistema comercial listo para vender.</p>
                 </div>
 
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
-                    <div class="glass" style="padding: 2.5rem;">
-                        <h3 style="color: #00e5ff; margin-bottom: 1.5rem;">Dependiendo de agencias, redactores y mil
-                            variables</h3>
-                        <ul style="list-style: none;">
-                            <li style="margin-bottom: 1rem; color: var(--text-secondary);">❌ Producción lenta:
-                                coordinar, agendar, esperar entregas.</li>
-                            <li style="margin-bottom: 1rem; color: var(--text-secondary);">❌ Costoso: agencias, copys,
-                                community managers.</li>
-                            <li style="margin-bottom: 1rem; color: var(--text-secondary);">❌ Inconsistencia: cada post
-                                se lee diferente.</li>
-                            <li style="margin-bottom: 1rem; color: var(--text-secondary);">❌ Si algo no te gusta… toca
-                                repetir (más tiempo + más dinero).</li>
-                            <li style="margin-bottom: 1rem; color: var(--text-secondary);">❌ Terminas publicando “lo que
-                                salió”, no lo que querías.</li>
+                <div class="comparison-grid">
+                    <div class="comparison-card bad">
+                        <h3 style="color:#ef4444;">Dependiendo de agencias, redactores y mil variables</h3>
+                        <ul>
+                            <li>&#10007; Producción lenta: coordinar, agendar, esperar entregas.</li>
+                            <li>&#10007; Costoso: agencias, copys, community managers.</li>
+                            <li>&#10007; Inconsistencia: cada post se lee diferente.</li>
+                            <li>&#10007; Si algo no te gusta… toca repetir (más tiempo + más dinero).</li>
+                            <li>&#10007; Terminas publicando "lo que salió", no lo que querías.</li>
                         </ul>
-                        <p style="margin-top: 2rem; font-weight: bold; color: #00e5ff;">Perder tu tiempo + dinero +
-                            retrasos + insatisfacción + estrés.</p>
+                        <p class="conclusion" style="color:#ef4444;">Perder tu tiempo + dinero + retrasos + insatisfacción + estrés.</p>
                     </div>
-
-                    <div class="glass"
-                        style="padding: 2.5rem; border-color: var(--accent-cyan); position: relative; overflow: hidden;">
-                        <div
-                            style="position: absolute; top: 0; left: 0; width: 100%; height: 5px; background: var(--gradient-primary);">
-                        </div>
-                        <h3 style="color: var(--accent-cyan); margin-bottom: 1.5rem;">Un sistema que produce sets
-                            comerciales</h3>
-                        <ul style="list-style: none;">
-                            <li style="margin-bottom: 1rem;">✅ Subes tu idea base + documento de tono de marca.</li>
-                            <li style="margin-bottom: 1rem;">✅ Generas un set completo listo (consistente y vendible).
-                            </li>
-                            <li style="margin-bottom: 1rem;">✅ Cambias enfoque o estilo sin rehacer de ceros.</li>
-                            <li style="margin-bottom: 1rem;">✅ Obtienes al instante los guiones y textos que quieras.
-                            </li>
-                            <li style="margin-bottom: 1rem;">✅ Resultado final: Recursos listos para tus Ads, redes y
-                                web.</li>
+                    <div class="comparison-card good">
+                        <h3 style="color:var(--accent-cyan);">Un sistema que produce sets comerciales</h3>
+                        <ul>
+                            <li>&#10003; Subes tu idea base + documento de tono de marca.</li>
+                            <li>&#10003; Generas un set completo listo (consistente y vendible).</li>
+                            <li>&#10003; Cambias enfoque o estilo sin rehacer de ceros.</li>
+                            <li>&#10003; Obtienes al instante los guiones y textos que quieras.</li>
+                            <li>&#10003; Resultado final: Recursos listos para tus Ads, redes y web.</li>
                         </ul>
-                        <p style="margin-top: 2rem; font-weight: bold;" class="gradient-text">Un sistema Pro hecho a tu
-                            gusto y medida listo para usar.</p>
+                        <p class="conclusion gradient-text">Un sistema Pro hecho a tu gusto y medida listo para usar.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- CTA Medio -->
-        <section class="reveal" style="text-align: center;">
+        <!-- CTA MEDIO -->
+        <section class="reveal" style="text-align:center;">
             <div class="container">
-                <h2>Deja de publicar “lo que te dio tiempo”, y empieza a publicar lo que sí quieres.</h2>
-                <p style="color: var(--text-secondary); max-width: 600px; margin: 1rem auto 2rem;">No necesitas
-                    experiencia previa. Puedes generar textos y guiones profesionales sin depender de agencias ni
-                    producción tradicional.</p>
-                <a href="#comprar" class="btn-primary">Adquiérelo
-                    hoy por $12.99<br><span style="font-size: 0.8rem; font-weight: normal;">Precio normal
-                        $39.99</span></a>
+                <h2 class="section-title" style="margin-bottom:16px;">Deja de publicar "lo que te dio tiempo", y empieza a publicar lo que sí quieres.</h2>
+                <p style="color:var(--text-secondary);max-width:600px;margin:0 auto 28px;">No necesitas experiencia previa. Puedes generar textos y guiones profesionales sin depender de agencias ni producción tradicional.</p>
+                <a href="#comprar" class="btn btn-primary btn-lg">Adquiérelo hoy por $12.99<br><small style="font-size:0.75rem;font-weight:400">Precio normal $39.99</small></a>
 
-                <h3 style="margin-top: 4rem; font-size: 1.5rem;">Así conviertes una simple referencia en contenido que
-                    vende.</h3>
-                <p style="color: var(--text-secondary); max-width: 600px; margin: 1rem auto;">No dependes de inspiración
-                    ni de suerte. Ejecutas un proceso claro que transforma referencias base en assets consistentes,
-                    escalables y listos.</p>
-                <p style="font-weight: bold; margin-top: 1rem;">Cómo funciona la entrega: Compras → Recibes enlace
-                    privado → Duplicas el workflow → Lo ejecutas y editas cuando quieras.</p>
+                <h3 style="font-family:var(--font-heading);font-size:1.4rem;margin-top:60px;">Así conviertes una simple referencia en contenido que vende.</h3>
+                <p style="color:var(--text-secondary);max-width:600px;margin:12px auto;">No dependes de inspiración ni de suerte. Ejecutas un proceso claro que transforma referencias base en assets consistentes, escalables y listos.</p>
+                <p style="font-weight:600;margin-top:16px;">Cómo funciona la entrega: Compras &rarr; Recibes enlace privado &rarr; Duplicas el workflow &rarr; Lo ejecutas y editas cuando quieras.</p>
             </div>
         </section>
 
-        <!-- Que incluye -->
-        <section id="incluye" class="reveal"
-            style="background: rgba(255,255,255,0.02); border-top: 1px solid var(--glass-border);">
+        <!-- QUE INCLUYE -->
+        <section id="incluye" class="section-alt reveal">
             <div class="container">
-                <div class="section-head">
-                    <h2>¿Qué estás comprando exactamente?</h2>
-                    <p
-                        style="color: var(--text-secondary); max-width: 750px; margin: 0 auto; font-size: 1.1rem; line-height: 1.7;">
-                        Acceso a una <strong style="color: var(--text-primary);">plataforma completa</strong> donde te
-                        enseñamos a crear
-                        <strong style="color: var(--text-primary);">workflows personalizados</strong> desde cero.
-                        Incluye workflows listos para <strong style="color: var(--text-primary);">duplicar con un
-                            clic</strong>
+                <div class="section-header">
+                    <div class="section-tag">Qué incluye</div>
+                    <h2 class="section-title">¿Qué estás comprando exactamente?</h2>
+                    <p style="color:var(--text-secondary);max-width:750px;margin:0 auto;font-size:1.05rem;line-height:1.7;">
+                        Acceso a una <strong style="color:var(--text-primary);">plataforma completa</strong> donde te enseñamos a crear
+                        <strong style="color:var(--text-primary);">workflows personalizados</strong> desde cero.
+                        Incluye workflows listos para <strong style="color:var(--text-primary);">duplicar con un clic</strong>
                         y empezar a producir contenido profesional en minutos.
                     </p>
                 </div>
 
-                <!-- Value Stack Visual -->
-                <div class="value-stack-grid">
-                    <div class="value-card glass">
-                        <div class="value-card-icon">🎓</div>
+                <div class="value-grid">
+                    <div class="glass value-card">
+                        <div class="icon">&#127891;</div>
                         <h4>Plataforma de Aprendizaje</h4>
-                        <p>Acceso a lecciones paso a paso donde aprendes a crear y personalizar tus propios workflows
-                            con IA. No necesitas experiencia previa.</p>
+                        <p>Acceso a lecciones paso a paso donde aprendes a crear y personalizar tus propios workflows con IA. No necesitas experiencia previa.</p>
                     </div>
-                    <div class="value-card glass">
-                        <div class="value-card-icon">⚡</div>
+                    <div class="glass value-card">
+                        <div class="icon">&#9889;</div>
                         <h4>Workflows Listos para Duplicar</h4>
-                        <p>Sistemas completos que copias con un clic a tu cuenta. Sin configurar nada. Abres, duplicas y
-                            empiezas a producir.</p>
+                        <p>Sistemas completos que copias con un clic a tu cuenta. Sin configurar nada. Abres, duplicas y empiezas a producir.</p>
                     </div>
-                    <div class="value-card glass">
-                        <div class="value-card-icon">🎯</div>
+                    <div class="glass value-card">
+                        <div class="icon">&#127919;</div>
                         <h4>Contenido UGC para Redes</h4>
-                        <p>Te enseñamos cómo generar guiones y piezas de contenido estilo UGC (User Generated Content)
-                            que realmente conecten en TikTok e Instagram.</p>
+                        <p>Te enseñamos cómo generar guiones y piezas de contenido estilo UGC que realmente conecten en TikTok e Instagram.</p>
                     </div>
-                    <div class="value-card glass">
-                        <div class="value-card-icon">📱</div>
+                    <div class="glass value-card">
+                        <div class="icon">&#128241;</div>
                         <h4>Campañas Multi-plataforma</h4>
-                        <p>Convierte tus ideas en un calendario mensual listo. Crea posteos, hilos y carruseles para
-                            todas tus redes sociales en tiempo récord.</p>
+                        <p>Convierte tus ideas en un calendario mensual listo. Crea posteos, hilos y carruseles para todas tus redes sociales en tiempo récord.</p>
                     </div>
                 </div>
 
-                <div id="comprar" class="pricing-card glass"
-                    style="border-color: var(--accent-cyan); margin-bottom: 4rem;">
-                    <div class="pricing-badge">🔥 97% DE DESCUENTO — OFERTA LIMITADA</div>
-                    <h3 style="font-size: 1.5rem; margin-bottom: 0.5rem;">AI Content Generation Workflow</h3>
-                    <p style="color: var(--text-secondary); font-size: 0.95rem; margin-bottom: 1rem;">Todo lo que
-                        necesitas para dominar la creación de contenido con IA</p>
-                    <div class="price">
-                        <span class="old-price">$39.99 USD</span><br>
-                        $12<span style="font-size: 1.5rem">.99 USD</span>
-                    </div>
+                <!-- PRICING -->
+                <div id="comprar" class="glass pricing-card">
+                    <div class="pricing-badge">97% DE DESCUENTO — OFERTA LIMITADA</div>
+                    <h3 style="font-family:var(--font-heading);font-size:1.4rem;margin-bottom:4px;">AI Content Generation Workflow</h3>
+                    <p style="color:var(--text-secondary);font-size:0.9rem;margin-bottom:12px;">Todo lo que necesitas para dominar la creación de contenido con IA</p>
+                    <div class="old-price">$39.99 USD</div>
+                    <div class="price">$12<small>.99 USD</small></div>
                     <ul class="features-list">
                         <li>Acceso completo a la plataforma de aprendizaje</li>
                         <li>Workflows listos para duplicar con 1 clic</li>
@@ -348,15 +309,11 @@
                         <li>Guías de personalización para tu marca</li>
                         <li>Acceso de por vida — pago único</li>
                     </ul>
-                    <a href="https://studiocontent-2.myshopify.com/checkouts/cn/hWNBkks9FLQfvspWNMtIeaUk/es-cl" target="_blank" class="btn-primary"
-                        style="margin-top: 1.5rem;">Acceder ahora por $12.99<br><span
-                            style="font-size: 0.8rem; font-weight: normal;">Precio normal $39.99 — Un solo
-                            pago</span></a>
-                    <p style="font-size: 0.8rem; margin-top: 1rem; color: var(--text-secondary);">🔒 Pago seguro ·
-                        Acceso inmediato · Sin suscripción</p>
+                    <a href="https://studiocontent-2.myshopify.com/checkouts/cn/hWNBkks9FLQfvspWNMtIeaUk/es-cl" target="_blank" class="btn btn-primary btn-lg" style="width:100%;">Acceder ahora por $12.99<br><small style="font-size:0.75rem;font-weight:400">Precio normal $39.99 — Un solo pago</small></a>
+                    <p style="font-size:0.8rem;margin-top:14px;color:var(--text-secondary);">Acceso inmediato · Sin suscripción</p>
                 </div>
 
-                <!-- 3 Steps -->
+                <!-- STEPS -->
                 <div class="steps-row">
                     <div class="step-item">
                         <div class="step-number">1</div>
@@ -377,175 +334,297 @@
                     </div>
                 </div>
 
-                <div style="text-align: center; margin: 3rem 0;">
-                    <p
-                        style="font-weight: 600; color: var(--accent-cyan); border: 1px dashed var(--glass-border); padding: 1rem 1.5rem; border-radius: 8px; display: inline-block; font-size: 1rem;">
-                        ⚡ Todo esto incluido por un precio menor a lo que cuesta un café al día.</p>
+                <div class="cta-banner">
+                    <p>Todo esto incluido por un precio menor a lo que cuesta un café al día.</p>
                 </div>
 
-                <div style="text-align: center;">
-                    <a href="#comprar" class="btn-primary">Acceder ahora por $12.99<br><span
-                            style="font-size: 0.8rem; font-weight: normal;">Precio normal $39.99</span></a>
+                <div style="text-align:center;">
+                    <a href="#comprar" class="btn btn-primary btn-lg">Acceder ahora por $12.99<br><small style="font-size:0.75rem;font-weight:400">Precio normal $39.99</small></a>
                 </div>
             </div>
         </section>
 
-        <!-- Extras -->
+        <!-- TESTIMONIOS -->
         <section class="reveal">
-            <div class="container text-center">
-                <h2>Lo que dicen cuando lo ejecutan y ven que el workflow entrega.</h2>
-                <p style="color: var(--text-secondary); max-width: 700px; margin: 1rem auto 3rem;">Un sistema duplicable
-                    que produce fotos comerciales. Estos son mensajes de gente que ya probaron el workflow.</p>
+            <div class="container">
+                <div class="section-header">
+                    <div class="section-tag">Testimonios</div>
+                    <h2 class="section-title">Lo que dicen cuando lo ejecutan y ven que el workflow entrega.</h2>
+                    <p class="section-desc">Un sistema duplicable que produce fotos comerciales. Estos son mensajes de gente que ya probaron el workflow.</p>
+                </div>
 
-                <div
-                    style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; text-align: left; margin-bottom: 4rem;">
-                    <div class="glass" style="padding: 1.5rem; border-radius: 12px;">
-                        <p style="font-style: italic; color: var(--text-primary);">“En una tarde saqué un mes de
-                            contenido completo para mis clientes.”</p>
+                <div class="testimonials-grid">
+                    <div class="glass testimonial-card"><p>En una tarde saqué un mes de contenido completo para mis clientes.</p></div>
+                    <div class="glass testimonial-card"><p>La fidelidad del producto fue lo que me sorprendió. Realmente genera fotos de alta calidad.</p></div>
+                    <div class="glass testimonial-card"><p>Estuve buscando algo así hace meses gracias!!</p></div>
+                    <div class="glass testimonial-card"><p>Literalmente no puedo creer lo que hace la inteligencia artificial.</p></div>
+                    <div class="glass testimonial-card"><p>Antes dependía de sesiones, horarios, retoques… ahora en unos minutos saco mis recursos como yo quiera.</p></div>
+                </div>
+
+                <div style="text-align:center;">
+                    <a href="#comprar" class="btn btn-primary btn-lg">Adquiérelo hoy por $12.99<br><small style="font-size:0.75rem;font-weight:400">Precio normal $39.99</small></a>
+                </div>
+            </div>
+        </section>
+
+        <!-- RECAP + FAQ -->
+        <section class="section-alt reveal">
+            <div class="container">
+                <div class="glass" style="padding:40px;margin-bottom:60px;">
+                    <h2 class="section-title" style="text-align:center;">Esto es lo que recibes hoy para producir assets que venden.</h2>
+                    <p style="text-align:center;color:var(--text-secondary);margin-bottom:32px;">No es "un archivo". Es un sistema completo + bonos + acceso para mantenerlo actualizado. Todo listo para ejecutar.</p>
+                    <div class="recap-grid">
+                        <div class="recap-item"><h4>Workflow Ready to Use</h4><p>Template del sistema completo para generar tu contenido digital con consistencia y fidelidad.</p></div>
+                        <div class="recap-item"><h4>Content Style Replicator</h4><p>Replica referencias (Pinterest/brands) con prompts más precisos para lograr consistencia sin frustración.</p></div>
                     </div>
-                    <div class="glass" style="padding: 1.5rem; border-radius: 12px;">
-                        <p style="font-style: italic; color: var(--text-primary);">“La fidelidad del producto fue lo que
-                            me sorprendió. Realmente genera fotos de alta calidad.”</p>
-                    </div>
-                    <div class="glass" style="padding: 1.5rem; border-radius: 12px;">
-                        <p style="font-style: italic; color: var(--text-primary);">“Estuve buscando algo así hace meses
-                            gracias!!”</p>
-                    </div>
-                    <div class="glass" style="padding: 1.5rem; border-radius: 12px;">
-                        <p style="font-style: italic; color: var(--text-primary);">“Literalmente no puedo creer lo que
-                            hace la inteligencia artificial.”</p>
-                    </div>
-                    <div class="glass" style="padding: 1.5rem; border-radius: 12px;">
-                        <p style="font-style: italic; color: var(--text-primary);">“Antes dependía de sesiones,
-                            horarios, retoques… ahora en unos minutos saco mis recursos como yo quiera.”</p>
+                    <p style="color:var(--accent-cyan);text-align:center;margin-top:24px;font-weight:600;font-size:0.9rem;">Esta compra NO incluye la suscripción a herramientas IA de terceros.</p>
+                    <div style="text-align:center;margin-top:24px;">
+                        <a href="#comprar" class="btn btn-primary">Obtener el sistema completo</a>
+                        <p style="font-size:0.8rem;margin-top:12px;color:var(--text-secondary);">Recurso premium: disponible al público por tiempo limitado.</p>
                     </div>
                 </div>
 
-                <div style="text-align: center;">
-                    <a href="#comprar" class="btn-primary"
-                        style="margin-bottom: 5rem; display: inline-block;">Adquiérelo hoy por $12.99<br><span
-                            style="font-size: 0.8rem; font-weight: normal;">Precio normal $39.99</span></a>
-                </div>
-
-                <!-- Recap Final -->
-                <div class="glass" style="padding: 3rem 1.5rem; margin-bottom: 5rem; text-align: left;">
-                    <h2 style="text-align: center; margin-bottom: 1rem;">Esto es lo que recibes hoy para producir assets
-                        que venden.</h2>
-                    <p style="text-align: center; color: var(--text-secondary); margin-bottom: 3rem;">No es “un
-                        archivo”. Es un sistema completo + bonos + acceso para mantenerlo actualizado. Todo listo para
-                        ejecutar.</p>
-
-                    <div
-                        style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem;">
-                        <div style="border-bottom: 1px solid var(--glass-border); padding-bottom: 1rem;">
-                            <h4 style="color: var(--accent-cyan); margin-bottom: 0.5rem;">Workflow Ready to Use</h4>
-                            <p style="color: var(--text-secondary); font-size: 0.9rem;">Template del sistema completo
-                                para generar tu contenido digital con consistencia y fidelidad.</p>
-                        </div>
-                        <div style="border-bottom: 1px solid var(--glass-border); padding-bottom: 1rem;">
-                            <h4 style="color: var(--accent-cyan); margin-bottom: 0.5rem;">Content Style Replicator</h4>
-                            <p style="color: var(--text-secondary); font-size: 0.9rem;">Replica referencias
-                                (Pinterest/brands) con prompts más precisos para lograr consistencia sin frustración.
-                            </p>
-                        </div>
-
-
-                    </div>
-
-                    <p
-                        style="color: #00e5ff; text-align: center; margin-top: 2rem; font-weight: bold; font-size: 0.9rem;">
-                        Esta compra NO incluye la suscripción a herramientas IA de terceros.</p>
-
-                    <div style="text-align: center; margin-top: 2rem;">
-                        <a href="#comprar" class="btn-primary">Obtener el sistema completo</a>
-                        <p style="font-size: 0.8rem; margin-top: 1rem; color: var(--text-secondary);">Recurso premium:
-                            disponible al público por tiempo limitado.</p>
-                    </div>
-                </div>
-
-                <h2 style="font-size: 2.5rem; margin-bottom: 2rem; text-align: center;">Esto es lo que puedes lograr con
-                    CERO experiencia con
-                    AI.</h2>
-                <div style="text-align: center;">
-                    <a href="#comprar" class="btn-primary"
-                        style="margin-bottom: 4rem; display: inline-block;">Adquiérelo hoy por $12.99<br><span
-                            style="font-size: 0.8rem; font-weight: normal;">Precio normal $39.99</span></a>
+                <h2 class="section-title" style="text-align:center;font-size:2rem;margin-bottom:32px;">Esto es lo que puedes lograr con CERO experiencia con AI.</h2>
+                <div style="text-align:center;margin-bottom:50px;">
+                    <a href="#comprar" class="btn btn-primary btn-lg">Adquiérelo hoy por $12.99<br><small style="font-size:0.75rem;font-weight:400">Precio normal $39.99</small></a>
                 </div>
 
                 <!-- FAQ -->
-                <div id="faq" style="text-align: left; max-width: 800px; margin: 0 auto;">
-                    <h2 style="text-align: center; margin-bottom: 1rem;">Preguntas frecuentes</h2>
-                    <p style="text-align: center; color: var(--text-secondary); margin-bottom: 3rem;">Todo lo que
-                        necesitas saber antes de tomar la decisión.</p>
-
-                    <div class="glass" style="padding: 1.5rem; margin-bottom: 1rem;">
-                        <h4 style="margin-bottom: 0.5rem;">¿Necesito experiencia previa?</h4>
-                        <p style="color: var(--text-secondary); font-size: 0.9rem;">No, el sistema está diseñado paso a
-                            paso y te entrego la plantilla completa. Solo necesitas copiar el flujo y subir tus
-                            referencias.</p>
+                <div id="faq">
+                    <div class="section-header">
+                        <div class="section-tag">FAQ</div>
+                        <h2 class="section-title">Preguntas frecuentes</h2>
+                        <p class="section-desc">Todo lo que necesitas saber antes de tomar la decisión.</p>
                     </div>
-                    <div class="glass" style="padding: 1.5rem; margin-bottom: 1rem;">
-                        <h4 style="margin-bottom: 0.5rem;">¿Cuántos créditos o recursos IA gasta?</h4>
-                        <p style="color: var(--text-secondary); font-size: 0.9rem;">Dentro del tutorial hay todo un
-                            bloque dedicado a cómo generar este contenido balanceando la máxima calidad con el mínimo
-                            costo computacional (tokens o créditos de IA).</p>
+                    <div class="faq-grid">
+                        <div class="glass faq-item">
+                            <h4>¿Necesito experiencia previa?</h4>
+                            <p>No, el sistema está diseñado paso a paso y te entrego la plantilla completa. Solo necesitas copiar el flujo y subir tus referencias.</p>
+                        </div>
+                        <div class="glass faq-item">
+                            <h4>¿Cuántos créditos o recursos IA gasta?</h4>
+                            <p>Dentro del tutorial hay todo un bloque dedicado a cómo generar este contenido balanceando la máxima calidad con el mínimo costo computacional (tokens o créditos de IA).</p>
+                        </div>
+                        <div class="glass faq-item">
+                            <h4>¿Es un solo pago?</h4>
+                            <p>Sí, el acceso al workflow, a tus tutoriales y a los bonos es tuyo para siempre con un único pago.</p>
+                        </div>
                     </div>
-                    <div class="glass" style="padding: 1.5rem; margin-bottom: 1rem;">
-                        <h4 style="margin-bottom: 0.5rem;">¿Es un solo pago?</h4>
-                        <p style="color: var(--text-secondary); font-size: 0.9rem;">Sí, el acceso al workflow, a tus
-                            tutoriales
-                            y a los bonos es tuyo para siempre con un único pago.</p>
-                    </div>
-
-                    <div style="text-align: center; margin-top: 3rem;">
-                        <a href="#comprar" class="btn-primary">Adquiérelo hoy por $12.99<br><span
-                                style="font-size: 0.8rem; font-weight: normal;">Precio normal $39.99</span></a>
+                    <div style="text-align:center;margin-top:36px;">
+                        <a href="#comprar" class="btn btn-primary btn-lg">Adquiérelo hoy por $12.99<br><small style="font-size:0.75rem;font-weight:400">Precio normal $39.99</small></a>
                     </div>
                 </div>
-
             </div>
         </section>
-    </main>
+    
+    <!-- CTA POPUP MODAL -->
+    <div id="cta-modal" class="modal-overlay" aria-hidden="true">
+        <div class="modal-content">
+            <button class="modal-close" id="modal-close" aria-label="Cerrar">&times;</button>
+            <div class="modal-badge">Oferta limitada</div>
+            <h2 class="modal-title">Obtén el AI Content Workflow</h2>
+            <p class="modal-subtitle">Todo el sistema para generar contenido con IA en minutos.</p>
+            <div class="modal-price">
+                <span class="old-price">$39.99 USD</span>
+                <span class="current-price">$12.99 USD</span>
+            </div>
+            <ul class="modal-features">
+                <li>Acceso completo a la plataforma</li>
+                <li>Workflows listos para duplicar</li>
+                <li>Video tutoriales paso a paso</li>
+                <li>Acceso de por vida — pago único</li>
+            </ul>
+            <a id="modal-checkout" href="https://studiocontent-2.myshopify.com/checkouts/cn/hWNBkks9FLQfvspWNMtIeaUk/es-cl" target="_blank" class="btn btn-primary btn-lg modal-cta">Ir al checkout</a>
+            <p class="modal-note">Pago seguro vía Shopify · Acceso inmediato</p>
+        </div>
+    </div>
+</main>
 
-    <footer
-        style="padding: 4rem 0; text-align: center; border-top: 1px solid var(--glass-border); background: var(--bg-dark);">
+    <footer>
         <div class="container">
-            <div class="logo" style="margin-bottom: 2rem;">STUDIO<span class="gradient-text">CONTENT</span></div>
-            <p style="color: var(--text-secondary);">&copy; 2026 AI Content Studio. Todos los derechos reservados.</p>
-            <p style="margin-top: 1rem;">
-                <a href="privacidad.html" style="color: var(--accent-cyan); text-decoration: none; font-size: 0.85rem;">Política de Privacidad y Eliminación de Datos</a>
+            <div class="footer-brand" style="display:flex;align-items:center;justify-content:center;gap:8px;">
+                <div class="nav-logo-dot"></div>
+                Studio<span class="gradient-text">Content</span>
+            </div>
+            <p style="color:var(--text-secondary);font-size:0.9rem;">&copy; 2026 AI Content Studio. Todos los derechos reservados.</p>
+            <p style="margin-top:8px;">
+                <a href="privacidad.html">Política de Privacidad y Eliminación de Datos</a>
             </p>
         </div>
     </footer>
 
-    <!-- Purchase Popup Modal -->
-    <div class="modal-overlay" id="purchase-modal">
-        <div class="modal-popup">
-            <button class="modal-close" id="modal-close">&times;</button>
-            <div class="modal-badge">🔥 OFERTA LIMITADA</div>
-            <h3>AI Content Generation Workflow</h3>
-            <p class="modal-subtitle">Todo lo que necesitas para dominar la creación de contenido con IA</p>
-            <div class="price">
-                <span class="old-price">$39.99 USD</span><br>
-                $12<span style="font-size: 1.2rem;">.99 USD</span>
-            </div>
-            <ul class="features-list">
-                <li>Acceso completo a la plataforma de aprendizaje</li>
-                <li>Workflows listos para duplicar con 1 clic</li>
-                <li>Video tutoriales paso a paso</li>
-                <li>Acceso de por vida — pago único</li>
-            </ul>
-            <a href="https://studiocontent-2.myshopify.com/checkouts/cn/hWNBkks9FLQfvspWNMtIeaUk/es-cl"
-               target="_blank"
-               class="modal-btn-cart"
-               id="modal-add-to-cart">
-                Ir al pago
-            </a>
-            <p class="modal-secure">🔒 Pago seguro · Acceso inmediato · Sin suscripción</p>
-        </div>
-    </div>
+    <script>
+        // Node canvas background
+        const canvas = document.getElementById('node-canvas');
+        const ctx = canvas.getContext('2d');
+        let particles = [];
+        let animId;
 
-    <script src="script.js"></script>
+        function resizeCanvas() {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        }
+        resizeCanvas();
+        window.addEventListener('resize', () => {
+            resizeCanvas();
+            initParticles();
+        });
+
+        function initParticles() {
+            const count = Math.min(80, Math.floor((canvas.width * canvas.height) / 15000));
+            particles = [];
+            for (let i = 0; i < count; i++) {
+                particles.push({
+                    x: Math.random() * canvas.width,
+                    y: Math.random() * canvas.height,
+                    r: Math.random() * 1.5 + 0.5,
+                    vx: (Math.random() - 0.5) * 0.3,
+                    vy: (Math.random() - 0.5) * 0.3,
+                    alpha: Math.random() * 0.5 + 0.1
+                });
+            }
+        }
+        initParticles();
+
+        function drawParticles() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            particles.forEach((p, i) => {
+                p.x += p.vx;
+                p.y += p.vy;
+                if (p.x < 0) p.x = canvas.width;
+                if (p.x > canvas.width) p.x = 0;
+                if (p.y < 0) p.y = canvas.height;
+                if (p.y > canvas.height) p.y = 0;
+
+                ctx.beginPath();
+                ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+                ctx.fillStyle = `rgba(255,255,255,${p.alpha})`;
+                ctx.fill();
+
+                // Draw connections
+                for (let j = i + 1; j < particles.length; j++) {
+                    const dx = p.x - particles[j].x;
+                    const dy = p.y - particles[j].y;
+                    const dist = Math.sqrt(dx * dx + dy * dy);
+                    if (dist < 120) {
+                        ctx.beginPath();
+                        ctx.moveTo(p.x, p.y);
+                        ctx.lineTo(particles[j].x, particles[j].y);
+                        ctx.strokeStyle = `rgba(6,182,212,${0.06 * (1 - dist / 120)})`;
+                        ctx.lineWidth = 0.5;
+                        ctx.stroke();
+                    }
+                }
+            });
+            animId = requestAnimationFrame(drawParticles);
+        }
+        drawParticles();
+
+        // Navbar scroll effect
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            navbar.classList.toggle('scrolled', window.scrollY > 50);
+        });
+
+        // Mobile menu toggle
+        const menuToggle = document.getElementById('menu-toggle');
+        const navLinks = document.getElementById('nav-links');
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('open');
+        });
+        document.querySelectorAll('#nav-links a').forEach(link => {
+            link.addEventListener('click', () => navLinks.classList.remove('open'));
+        });
+
+        // Scroll reveal
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('revealed');
+                    revealObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+
+        document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+        // Checkout configuration
+        const CHECKOUT_URL = 'https://studiocontent-2.myshopify.com/checkouts/cn/hWNBkks9FLQfvspWNMtIeaUk/es-cl';
+
+        // CTA Popup Logic + Meta Pixel AddToCart
+        const modal = document.getElementById('cta-modal');
+        const modalClose = document.getElementById('modal-close');
+        const modalCheckout = document.getElementById('modal-checkout');
+
+        function openModal() {
+            modal.classList.add('active');
+            modal.setAttribute('aria-hidden', 'false');
+            document.body.style.overflow = 'hidden';
+
+            // Meta Pixel - AddToCart event
+            if (typeof fbq === 'function') {
+                fbq('track', 'AddToCart', {
+                    content_name: 'AI Content Generation Workflow',
+                    content_type: 'product',
+                    content_ids: ['studiocontent-workflow-001'],
+                    value: 12.99,
+                    currency: 'USD'
+                });
+            }
+        }
+
+        function closeModal() {
+            modal.classList.remove('active');
+            modal.setAttribute('aria-hidden', 'true');
+            document.body.style.overflow = '';
+        }
+
+        // Bind all CTA buttons to open modal instead of direct checkout
+        document.querySelectorAll('a[href^="http"], a[href^="#comprar"]').forEach(link => {
+            if (link.id === 'modal-checkout') return; // exclude modal checkout button
+            const href = link.getAttribute('href') || '';
+            const text = link.textContent.toLowerCase();
+            const isCta = href.includes('checkouts') || href === '#comprar' || text.includes('comprar') || text.includes('adquirir') || text.includes('acceder') || text.includes('obtener');
+            if (isCta) {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    openModal();
+                });
+            }
+        });
+
+        modalClose.addEventListener('click', closeModal);
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) closeModal();
+        });
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && modal.classList.contains('active')) closeModal();
+        });
+
+        // Track InitiateCheckout when user clicks "Ir al checkout" inside modal
+        modalCheckout.addEventListener('click', function() {
+            if (typeof fbq === 'function') {
+                fbq('track', 'InitiateCheckout', {
+                    content_name: 'AI Content Generation Workflow',
+                    content_type: 'product',
+                    content_ids: ['studiocontent-workflow-001'],
+                    value: 12.99,
+                    currency: 'USD',
+                    num_items: 1
+                });
+            }
+        });
+
+        // Smooth scroll for anchor links (exclude #comprar now handled by modal)
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                if (this.getAttribute('href') === '#comprar') return;
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) target.scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+    </script>
 </body>
 
 </html>

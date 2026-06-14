@@ -1,0 +1,11 @@
+.vercel
+.claude/
+.vscode/
+tunnel_log.txt
+*.log
+.env
+.env.local
+.DS_Store
+Thumbs.db
+*.bak
+node_modules/
